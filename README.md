@@ -25,7 +25,7 @@ In your project level `build.gradle` or `settings.gradle`:
 repositories {
     mavenCentral()
     maven {
-        url = uri("<MAVEN REPO URL>")
+        url = uri("https://jitpack.io")
     }
 }
 ```

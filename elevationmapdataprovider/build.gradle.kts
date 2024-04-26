@@ -2,6 +2,7 @@ plugins {
     id("java-library")
     alias(libs.plugins.jetbrainsKotlinJvm)
     kotlin("kapt")
+    id("maven-publish")
 }
 
 java {

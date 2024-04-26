@@ -19,18 +19,18 @@ App should consist of 2 screens:
 DataProvider library is equipt with `koinDPModule` and `DaggerDPModule`, to retrieve `DataProviderApi` using `koin`, `Dagger2` or `Hilt` at your choosing. Its essential to use DI, because its the only way to receive all the necessary data in your app.
 
 
-Add DataProvider library to your project:
-In your project level `build.gradle` or `settings.gradle`:
-```
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://jitpack.io")
-    }
-}
-```
+To add DataProvider library to your project you need to do:
+1. In your project level `build.gradle` or `settings.gradle`:
+   ```
+   repositories {
+       mavenCentral()
+       maven {
+           url = uri("https://jitpack.io")
+       }
+   }
+   ```
 
-In your app level `build.gradle`:
-```
-implementation("com.github.pepperoni-digiteq:DigiteqAssigmentDataProvider:1.4")
-```
+2. In your app level `build.gradle`:
+   ```
+   implementation("com.github.pepperoni-digiteq:DigiteqAssigmentDataProvider:1.4")
+   ```

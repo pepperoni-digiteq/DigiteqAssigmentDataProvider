@@ -13,7 +13,8 @@ App should consist of 2 screens:
     
  3. Detail screen that will display the elevation map and trapped water. Use the size of the screen to display data in full, without any scrolling. The representation doesnt need to be graphically advanced and can be as simple as black and blue squares representing terrain and water respectively. For example:
 
-    ![image](https://github.com/pepperoni-digiteq/DigiteqAssigmentDataProvider/assets/165902639/38b0a544-584e-4aeb-9f65-009e79de7c56)
+    <img width="457" alt="image" src="https://github.com/pepperoni-digiteq/DigiteqAssigmentDataProvider/assets/165902639/2b5b99f5-52bc-410d-ad8e-3bd7c4bf48ae">
+
 
 
 DataProvider library is equipt with `koinDPModule` and `DaggerDPModule`, to retrieve `DataProviderApi` using `koin`, `Dagger2` or `Hilt` at your choosing. Its essential to use DI, because its the only way to receive all the necessary data in your app.

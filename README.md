@@ -35,5 +35,5 @@ In order to test your algorithmic solution use `assertAmount { ... }` tool from 
 
 2. In your app level `build.gradle`:
    ```
-   implementation("com.github.pepperoni-digiteq:DigiteqAssigmentDataProvider:1.4")
+   implementation("com.github.pepperoni-digiteq:DigiteqAssigmentDataProvider:1.5")
    ```

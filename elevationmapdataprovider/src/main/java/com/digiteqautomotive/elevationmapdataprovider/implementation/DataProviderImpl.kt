@@ -9,21 +9,18 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 
-internal class DataProviderImpl: DataProviderApi {
+internal class DataProviderImpl : DataProviderApi {
 
-    //TODO use more basic form of data (byteArray for example)
-    override fun getElevation(): Flow<IntArray> = flow {
+    override fun getElevation(): Flow<List<String>> = flow {
         val dataFromFile = withContext(Dispatchers.IO) {
             val inputStream =
-                this@DataProviderImpl.javaClass.classLoader.getResourceAsStream("raw/elevation_data.txt")
+                this@DataProviderImpl.javaClass.classLoader.getResourceAsStream("raw/elevation_data.csv")
             inputStream?.bufferedReader()?.useLines { lines ->
-                lines.map { line ->
-                    line.replace(" ", "")
-                        .takeIf { it.isNotEmpty() }
-                        ?.split(',')
-                        ?.map { it.toInt() }
-                        ?.toIntArray() ?: intArrayOf()
-                }.toList()
+                lines
+                    .map {
+                        it.split(',')
+                    }
+                    .toList()
             }
         } ?: emptyList()
         delay(1000)

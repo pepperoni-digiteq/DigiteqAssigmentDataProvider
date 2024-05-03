@@ -3,5 +3,5 @@ package com.digiteqautomotive.elevationmapdataprovider.api
 import kotlinx.coroutines.flow.Flow
 
 interface DataProviderApi {
-    fun getElevation(): Flow<IntArray>
+    fun getElevation(): Flow<List<String>>
 }

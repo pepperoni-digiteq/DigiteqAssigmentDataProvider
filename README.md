@@ -19,7 +19,9 @@
 
 DataProvider library is equipt with `koinDPModule` and `DaggerDPModule`, to retrieve `DataProviderApi` using `koin`, `Dagger2` or `Hilt` at your choosing. Its essential to use DI, because its the only way to receive all the necessary data in your app.
 
+### Testing
 In order to test your algorithmic solution use `assertAmount { ... }` tool from DataProvider library. **You must have a unit test in your project that passes this assertion.**
+Create a GitHub Actions workflow that will run all unit tests automatically each time pull request accurs and can be triggered manually.
 
 
 ### To add DataProvider library to your project you need to do:

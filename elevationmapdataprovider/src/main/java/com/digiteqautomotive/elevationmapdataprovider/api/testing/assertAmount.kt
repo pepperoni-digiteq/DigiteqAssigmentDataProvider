@@ -1,6 +1,7 @@
 package com.digiteqautomotive.elevationmapdataprovider.api.testing
 
 import com.digiteqautomotive.elevationmapdataprovider.implementation.TestDataProviderImpl
+import kotlin.system.measureNanoTime
 
 /**
  * @param computeAmount - lambda that takes an elevationMap as an argument
@@ -10,12 +11,15 @@ import com.digiteqautomotive.elevationmapdataprovider.implementation.TestDataPro
  */
 fun assertAmount(computeAmount: (List<String>) -> Int) {
     TestDataProviderImpl().getElevation().forEach {
-        print("Computing ${it.first}: ${it.third}... ")
-        val actual = computeAmount(it.third)
+        println("Computing ${it.first}}... ")
+        val actual: Int
+        val duration = measureNanoTime {
+            actual = computeAmount(it.third)
+        }
         if(actual != it.second){
             throw AssertionError("Expected result - ${it.second}; Actual result - $actual")
         }
-        println("Correct")
+        println("\t\t\t\t${duration/1_000_000f}")
     }
     println("Success")
 }
